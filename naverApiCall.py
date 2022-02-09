@@ -8,7 +8,6 @@ def getRequestUrl(url):
     req = urllib.request.Request(url) # 네이버 서버에 보낼 요청객체를 생성
     req.add_header("X-Naver-Client-Id",client_id) # 위에서 만들어진 요청객체에 client_id를 포함시킴
     req.add_header("X-Naver-Client-Secret", client_secret)
-
     response = urllib.request.urlopen(req) # 네이버서버에 요청객체 req를 전달하여 응답을받아 reponse에 저장
     if response.getcode() == 200: # 응답코드가 200이면 정상호출
         print('호출성공!!')
